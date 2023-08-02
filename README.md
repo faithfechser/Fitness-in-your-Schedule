@@ -3,7 +3,7 @@
 
 ## Description
 
-'Fitness in your Schedule' is your best fitness friend! Track your workout and target all of your major muscle groups through a list of thousands of exercises. Whether you're an athlete, a fitness enthusiast, or just starting your fitness journey, stay on track with ease on FINS!
+'Fitness in your Schedule' is your best fitness friend! Track your workout and target all of your major muscle groups through a list of thousands of exercises. Whether you're an athlete, a fitness enthusiast, or just starting your fitness journey, stay on track with ease on your new fitness tracker!
 
 ## Table of Contents
 - [Usage](#usage)
