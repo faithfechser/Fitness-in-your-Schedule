@@ -9,6 +9,7 @@ export const LOGIN_USER = gql`
       user {
         _id
         username
+        email
       }
     }
   }
@@ -23,15 +24,6 @@ export const ADD_USER = gql`
         _id
         username
         email
-        exerciseCount
-        savedExercise {
-          name
-          exerciseId
-          type
-          muscle
-          difficulty
-          instructions
-        }
       }
     }
   }
@@ -44,6 +36,7 @@ export const SAVE_EXERCISE = gql`
       _id
       username
       email
+      excerciseCount
       savedExcercise {
         ExcerciseId
         name
@@ -58,18 +51,19 @@ export const SAVE_EXERCISE = gql`
 
 // boilerplate code to remove exercise
 export const REMOVE_EXERCISE = gql`
-  mutation removeExercise($bookId: ID!) {
+  mutation removeExercise($exerciseId: ID!) {
     removeExercise(ExerciseId: $ExerciseId) {
       _id
       username
       email
+      exerciseCount
       savedExercise {
         ExerciseId
         name
-        instructions
-        name
         type
         muscle
+        difficulty 
+        instructions
       }
     }
   }
