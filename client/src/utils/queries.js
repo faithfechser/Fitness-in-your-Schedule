@@ -9,8 +9,8 @@ export const GET_ME = gql`
       _id
       username
       email
-      bookCount
-      savedBooks {
+      exerciseCount
+      savedExercises {
         exerciseId
         name
         type
