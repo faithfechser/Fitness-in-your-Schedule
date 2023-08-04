@@ -6,7 +6,7 @@ import { LOGIN_USER } from '../utils/mutations';
 
 
 const LoginForm = () => {
-    const [userFormData, setUserFormData] = useState({ username: '', pasword: '' });
+    const [userFormData, setUserFormData] = useState({ username: '', password: '' });
     const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
 

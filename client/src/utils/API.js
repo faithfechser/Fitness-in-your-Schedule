@@ -61,8 +61,8 @@ request.get({
     headers: {
       'X-Api-Key': 'Z5lGAMROpA1mmSZzDm+eHA==EHhBWQwj1ishogpN'
     },
-  }, function(error, response, body) {
+  }, function(error, data, body) {
     if(error) return console.error('Request failed:', error);
-    else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
+    else if(data.statusCode != 200) return console.error('Error:', data.statusCode, body.toString('utf8'));
     // else console.log(body)
   });
