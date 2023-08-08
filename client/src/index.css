@@ -1,0 +1,35 @@
+/* Main Colors */
+:root {
+    --text: #23383B;
+    --main: #FC7256;
+    --mainAccent: #A56A5E;
+    --buttons: #55868C;
+    --background: #F5E6E2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body{
+    background-color:var(--background) !important;
+    margin: 0;
+}
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main);
+    color:var(--background);
+}
+
+header h1 {
+    margin: 25px;
+    cursor: pointer;
+  }
+
+/* Navigation styling */
+/* .ml-auto{
+
+} */
