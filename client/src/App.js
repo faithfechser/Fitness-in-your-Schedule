@@ -7,6 +7,7 @@ import { setContext } from '@apollo/client/link/context';
 import SearchBooks from './pages/SearchExercise';
 import SavedBooks from './pages/SavedExcercise';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 
 // Construct the main GraphQL API endpoint
@@ -37,6 +38,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
+          <Header />
           <Navbar />
           <Routes>
             <Route path='/' element={<SearchExercise />} />
