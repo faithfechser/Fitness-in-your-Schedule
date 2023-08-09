@@ -5,7 +5,7 @@ import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@ap
 import { setContext } from '@apollo/client/link/context';
 
 import SearchExercise from './pages/SearchExercise';
-import SavedExcercise from './pages/SavedExcercise';
+import SavedExercise from './pages/SavedExercise';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 
