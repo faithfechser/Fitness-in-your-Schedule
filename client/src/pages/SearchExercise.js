@@ -63,6 +63,8 @@ const ExerciseList = () => {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 };
