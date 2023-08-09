@@ -15,6 +15,7 @@
     background-color:var(--background) !important;
     margin: 0;
 }
+
 /* Header styling */
 .header {
     display: flex;
@@ -22,6 +23,7 @@
     justify-content: space-between;
     background-color: var(--main);
     color:var(--background);
+    width: 100%;
 }
 
 header h1 {
@@ -30,6 +32,20 @@ header h1 {
   }
 
 /* Navigation styling */
-/* .ml-auto{
+.navbar{
+    background-color: var(--main);
+}
 
-} */
+.login-form{
+    max-width: 250px;
+    text-align: center;
+    padding:5px 25px;
+    
+}
+
+.signup-form{
+    max-width: 250px;
+    text-align: center;
+    padding:5px 25px;
+}
+
