@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <Container class='header'>
+    <div className = 'header' >
         <h1>Fitness in your Schedule</h1>
-    </Container>
+    </div>
   )
 }
 
