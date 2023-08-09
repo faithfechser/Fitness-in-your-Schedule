@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <div class='header'>
+    <Container class='header'>
         <h1>Fitness in your Schedule</h1>
-    </div>
+    </Container>
   )
 }
 
