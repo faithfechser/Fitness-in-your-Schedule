@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert , Container } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { LOGIN_USER } from '../utils/mutations';
@@ -44,6 +44,7 @@ const LoginForm = () => {
     }
 
     return (
+      <Container className="LoginForm">
         <>
           <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
             <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
@@ -82,6 +83,7 @@ const LoginForm = () => {
             </Button>
           </Form>
         </>
+        </Container>
       );
     };
     
