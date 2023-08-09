@@ -10,7 +10,7 @@ const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <>
+        <div className='navbar'>
             <Navbar bg='dark' variant='dark' expand='lg'>
                 <Container fluid>
                     <Navbar.Brand as={Link} to='/'>
@@ -38,9 +38,9 @@ const AppNavbar = () => {
                 </Container>
             </Navbar>
             {/* set modal data up */}
-            <SignupForm show={showModal} onHide={() => setShowModal(false)} />
             <LoginForm show={showModal} onHide={() => setShowModal(false)} />
-        </>
+            <SignupForm show={showModal} onHide={() => setShowModal(false)} />
+        </div>
     );
 }
 
