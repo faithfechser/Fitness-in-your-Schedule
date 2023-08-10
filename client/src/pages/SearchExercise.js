@@ -3,6 +3,7 @@ import { useLazyQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
 import weights from '../images/weights.jpg';
 
+
 const ExerciseList = () => {
     const [muscle, setMuscle] = useState('');
     const [searchExercises, { loading, error, data }] = useLazyQuery(GET_EXERCISES);

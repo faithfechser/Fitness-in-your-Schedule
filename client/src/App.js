@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // new
 import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
@@ -6,8 +6,11 @@ import { setContext } from '@apollo/client/link/context';
 
 import ExerciseList from './pages/SearchExercise';
 import SavedExercise from './pages/SavedExercise';
+import Signup from './pages/SignupForm';
+import Login from "./pages/LoginForm";
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Auth from "./utils/auth";
 
 
 // Construct the main GraphQL API endpoint
@@ -34,6 +37,15 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkLoginStatus = () => {
+      setIsLoggedIn(Auth.loggedIn());
+    };
+    checkLoginStatus();
+  }, []);
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -41,8 +53,10 @@ function App() {
           <Header />
           <Navbar />
           <Routes>
+            <Route path="/saved" element={isLoggedIn ? <SavedExercise /> : <Signup />}
+            />
             <Route path='/' element={<ExerciseList />} />
-            <Route path='/saved' element={<SavedExercise />} />
+            <Route path="/login" element={<Login />} />
             <Route path='*' element={<h1 className='display-2'>Wrong page!</h1>} />
           </Routes>
         </>
