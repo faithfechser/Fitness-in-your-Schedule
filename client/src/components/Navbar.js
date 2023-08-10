@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
-import SignupForm from './SignupForm';
-import LoginForm from './LoginForm';
+import SignupForm from '../pages/SignupForm';
+import LoginForm from '../pages/LoginForm';
+import SavedExercise from '../pages/SavedExercise';
+import SearchExercise from '../pages/SearchExercise';
 
 const AppNavbar = () => {
     // set modal display state
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className='navbar'>
-            <Navbar bg='dark' variant='dark' expand='lg'>
+        <div className='page-format'>
+            <Navbar className='navbar'>
                 <Container fluid>
                     <Navbar.Brand as={Link} to='/'>
                         Exercise Stats Search
@@ -38,9 +40,12 @@ const AppNavbar = () => {
                 </Container>
             </Navbar>
             {/* set modal data up */}
-            <LoginForm show={showModal} onHide={() => setShowModal(false)} />
-            <SignupForm show={showModal} onHide={() => setShowModal(false)} />
+            <div className='log-sign'>
+            {showModal && <LoginForm onHide={() => setShowModal(false)} />}
+            {showModal && <SignupForm onHide={() => setShowModal(false)} />}
+            </div>
         </div>
+
     );
 }
 

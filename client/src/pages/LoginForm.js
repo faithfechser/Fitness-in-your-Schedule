@@ -45,7 +45,7 @@ const LoginForm = () => {
 
     return (
       <div className = "login-form">
-        <h2>Log in!</h2>
+        <h6>Log in!</h6>
         <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
           <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
             Something went wrong with your login credentials!
@@ -55,9 +55,9 @@ const LoginForm = () => {
             <Form.Control
               type='text'
               placeholder='Your email'
-              name='email'
+              name='username'
               onChange={handleInputChange}
-              value={userFormData.email}
+              value={userFormData.username}
               required
             />
             <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>

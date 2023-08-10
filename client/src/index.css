@@ -5,6 +5,7 @@
     --mainAccent: #A56A5E;
     --buttons: #55868C;
     --background: #F5E6E2;
+    --background2: #fff6f4;
 }
 
 * {
@@ -27,26 +28,36 @@
 }
 
 header h1 {
-    margin: 25px;
+    padding: 25px;
     cursor: pointer;
   }
 
 /* Navigation styling */
 .navbar{
-    background-color: var(--main);
+    background-color: var(--background);
 }
 
-.login-form{
-    max-width: 250px;
+.login-form {
     text-align: center;
-    padding:5px 25px;
-    
+    padding: 50px 500px;
+    background-color: var(--background2);
 }
 
 .signup-form{
-    max-width: 250px;
     text-align: center;
-    padding:5px 25px;
+    padding: 0px 500px;
+    background-color: var(--background2);
+}
+
+/* Page Styling */
+.searchEx {
+    background-color: var(--background2);
+    padding: 50px;
+
+}
+.searchEx {
+    border: none;
+    outline: none;
 }
 
 .loadingExercise {
@@ -128,3 +139,4 @@ header h1 {
     align-items: center;
     z-index: 999;
   }
+

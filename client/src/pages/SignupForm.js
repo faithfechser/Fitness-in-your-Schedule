@@ -52,7 +52,7 @@ const SignupForm = () => {
 
     return (
         <div className='signup-form'>
-            <h2>Sign up!</h2>
+            <h6>Sign up!</h6>
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
                     Something went wrong with your signup!
@@ -95,7 +95,6 @@ const SignupForm = () => {
                     />
                     <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
                 </Form.Group>
-
                 <Button
                     disabled={!(userFormData.username && userFormData.email && userFormData.password)}
                     type='submit'
