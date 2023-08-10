@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import SearchExercise from './pages/SearchExercise';
+import ExerciseList from './pages/SearchExercise';
 import SavedExercise from './pages/SavedExercise';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -41,7 +41,7 @@ function App() {
           <Header />
           <Navbar />
           <Routes>
-            <Route path='/' element={<SearchExercise />} />
+            <Route path='/' element={<ExerciseList />} />
             <Route path='/saved' element={<SavedExercise />} />
             <Route path='*' element={<h1 className='display-2'>Wrong page!</h1>} />
           </Routes>
