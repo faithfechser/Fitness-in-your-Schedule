@@ -59,3 +59,84 @@ header h1 {
     border: none;
     outline: none;
 }
+
+.loadingExercise {
+    border-radius: 8px;
+    height: 15rem;
+    width: 17rem;
+    margin-top: .5rem;
+  }
+
+
+.exercise-instructions {
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+  color: rgb(48, 42, 73);
+  font-size: 1.3rem;
+
+  word-break: break-word;
+}
+
+.exercise-diff {
+    color: rgb(48, 42, 73);
+    font-size: 1.5rem;
+    text-shadow: black 0 0 5px;
+  }
+
+  .exercise-equip{
+    color:  rgb(48, 42, 73);
+    font-size: 1.5rem;
+    text-shadow: black 0 0 5px;
+  }
+
+  .exercise-muscle {
+    color:  rgb(48, 42, 73);
+    text-shadow: black 0 0 5px;
+    font-size: 1.5rem;
+  }
+
+  .exercise-type {
+    color: rgb(48, 42, 73);
+    text-shadow: black 0 0 5px;
+    font-size: 1.5rem;
+  }
+
+  .exercise-title {
+    font-weight: bold;
+    color: black;
+    font-size: 2.5rem;
+    text-shadow: turquoise 0 0 5px;
+  }
+
+  .exercise-card {
+    width: 100%;
+  }
+
+  .exerciseList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    height: 400px; 
+    overflow-y: auto;
+  }
+
+  .exerciseHeader {
+    color: rgb(60, 107, 247);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .exerciseBg {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
