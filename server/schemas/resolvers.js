@@ -11,7 +11,7 @@ const resolvers = {
       if (context.user) {
         const user = await User.findOne({ _id: context.user._id });
         console.log(user)
-        return user
+        return user;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
