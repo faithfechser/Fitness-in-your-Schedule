@@ -140,3 +140,20 @@ header h1 {
     z-index: 999;
   }
 
+  .exercise-input {
+    background-color: rgb(50, 53, 77);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 1.8rem;
+    font-family: 'Oswald';
+  }
+
+  .exercise-btn {
+    width: 20%;
+    height: 10%;
+    border-radius: 6px;
+    color: rgb(60, 107, 247);
+    background-color: #8ad9e3;
+
+  }

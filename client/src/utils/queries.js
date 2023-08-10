@@ -21,30 +21,6 @@ export const GET_ME = gql`
     }
   }
 `;
-// export const GET_ME = gql`
-//     query me {
-//         me {
-//             _id
-//             username
-//             email
-//             cardio {
-//                 _id
-//                 name
-//                 distance
-//                 duration
-//                 date
-//             }
-//             strength {
-//                 _id
-//                 name
-//                 weight
-//                 sets
-//                 reps
-//                 date
-//             }
-//         }
-//     }
-// `;
 
 
 export const GET_EXERCISES = gql`

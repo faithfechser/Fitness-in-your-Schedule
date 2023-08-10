@@ -23,14 +23,14 @@ const resolvers = {
       const promisifiedRequest = promisify(request.get);
 
       try {
-          const response = await promisifiedRequest({
+          const data = await promisifiedRequest({
               url,
               headers: {
                   'X-Api-Key': apiKey,
               },
           });
 
-          const body = JSON.parse(response.body);
+          const body = JSON.parse(data.body);
           return body;
       } catch (error) {
           console.error('Request failed:', error);

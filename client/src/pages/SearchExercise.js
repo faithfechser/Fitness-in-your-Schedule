@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
 import weights from '../images/weights.jpg';
-import loadingImage from '../images/loading.gif';
 
 const ExerciseList = () => {
     const [muscle, setMuscle] = useState('');
@@ -57,7 +56,7 @@ const ExerciseList = () => {
 
                             ))
                         ) : (
-                            <img src={loadingImage} alt="Kakashi run" className="loadingExercise" />
+                            <img  />
                         )}
 
                     </div>

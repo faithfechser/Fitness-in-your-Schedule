@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID!
     username: String! 
     email: String!
+    password: String
     savedexercises: [Exercise]
     exerciseCount: Int
   }
@@ -13,6 +14,7 @@ const typeDefs = gql`
     name: [String]
     type: String
     muscle: String
+    equipment: String!
     difficulty: String
     instructions: String
   }
@@ -21,6 +23,7 @@ const typeDefs = gql`
     name: [String]
     type: String
     muscle: String
+    equipment: String!
     difficulty: String
     instructions: String
   }
@@ -29,6 +32,7 @@ const typeDefs = gql`
     user: User
   }
   type Query {
+    getExercises(muscle: String!): [Exercise]
     me: User
   }
   type Mutation {
