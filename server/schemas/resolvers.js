@@ -3,6 +3,7 @@ const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 const request = require("request");
 const { promisify } = require("util");
+const apiKey = process.env.api_key;
 
 const resolvers = {
   Query: {
@@ -17,7 +18,6 @@ const resolvers = {
     },
 
     getExercises: async (_, { muscle }) => {
-      const apiKey = 'TlQ8rtTCCcfBCBzcvNrv6Y3yH8BxZZt3oLUstZkQ';
       const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
       const promisifiedRequest = promisify(request.get);
