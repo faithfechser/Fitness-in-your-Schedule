@@ -110,10 +110,12 @@ header h1 {
   }
 
   .exercise-card {
+    background-color: #8ad9e3;
     width: 100%;
   }
 
   .exerciseList {
+    /* background-color: #55868C; */
     display: flex;
     flex-direction: column;
     align-items: center;

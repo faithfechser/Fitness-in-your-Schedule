@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const exerciseSchema = new Schema({
     type: {
@@ -8,24 +8,28 @@ const exerciseSchema = new Schema({
     name: {
         type: String,
         required: true,
+        maxlength: 25,
     },
     duration: {
         type: Number,
         required: true,
     },
-    weight: {
+    distance: {
         type: Number,
-        required: false,
-    },
-    reps: {
-        type: Number,
-        required: false,
+        required: true,
     },
     sets: {
         type: Number,
         required: false,
     },
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
 
 });
 
-module.exports = exerciseSchema;
+const Exercise = model('Exercise', exerciseSchema);
+
+module.exports = Exercise;

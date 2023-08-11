@@ -15,8 +15,7 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
     "node-fetch": "^3.3.2",
-    "path": "^0.12.7",
-    "request": "^2.88.2"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
