@@ -1,6 +1,9 @@
 {
     "name": "fitness-in-your-schedule",
     "version": "1.0.0",
+    "engines":{
+      "node":"16.18.0"
+    },
     "description": "A fitness app that allows you to create your own workouts and track your progress.",
     "main": "server/server.js",
     "scripts": {
