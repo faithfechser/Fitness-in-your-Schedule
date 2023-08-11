@@ -1,8 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
-const request = require("request");
-const { promisify } = require("util");
+
 
 const resolvers = {
   Query: {
@@ -16,27 +15,27 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    getExercises: async (_, { muscle }) => {
-      const apiKey = 'TlQ8rtTCCcfBCBzcvNrv6Y3yH8BxZZt3oLUstZkQ';
-      const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
+  //   getExercises: async ( { muscle }) => {
+  //     const apiKey = 'TlQ8rtTCCcfBCBzcvNrv6Y3yH8BxZZt3oLUstZkQ';
+  //     const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
 
-      const promisifiedRequest = promisify(request.get);
+  //     const promisifiedRequest = promisify(request.get);
 
-      try {
-          const data = await promisifiedRequest({
-              url,
-              headers: {
-                  'X-Api-Key': apiKey,
-              },
-          });
+  //     try {
+  //         const data = await promisifiedRequest({
+  //             url,
+  //             headers: {
+  //                 'X-Api-Key': apiKey,
+  //             },
+  //         });
 
-          const body = JSON.parse(data.body);
-          return body;
-      } catch (error) {
-          console.error('Request failed:', error);
-          throw new Error('Failed to retrieve exercises');
-      }
-  },
+  //         const body = JSON.parse(data.body);
+  //         return body;
+  //     } catch (error) {
+  //         console.error('Request failed:', error);
+  //         throw new Error('Failed to retrieve exercises');
+  //     }
+  // },
   },
 
   Mutation: {

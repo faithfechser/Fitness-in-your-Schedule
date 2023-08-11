@@ -11,7 +11,7 @@ const typeDefs = gql`
   }
   type Exercise {
     exerciseId: String
-    name: [String]
+    name: String
     type: String
     muscle: String
     equipment: String!
@@ -20,7 +20,7 @@ const typeDefs = gql`
   }
   input InputExercise {
     exerciseId: String!
-    name: [String]
+    name: String
     type: String
     muscle: String
     equipment: String!

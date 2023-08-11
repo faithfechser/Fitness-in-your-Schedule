@@ -7,6 +7,7 @@ import auth from "../utils/auth";
 import { removeExerciseId } from "../utils/localStorage";
 import { useQuery, useMutation } from "@apollo/client";
 
+
 const SavedExercise = () => {
   const [loading, data] = useQuery(GET_ME);
   let userData = data?.me || {};

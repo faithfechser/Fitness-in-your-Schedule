@@ -1,36 +1,38 @@
 import React, { useState } from 'react';
-import { useLazyQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
 import weights from '../images/weights.jpg';
+import getExercises from '../utils/helper';
 
 
-const ExerciseList = () => {
+const ExerciseList = ()  => {
     const [muscle, setMuscle] = useState('');
-    const [searchExercises, { loading, error, data }] = useLazyQuery(GET_EXERCISES);
+    const [data, setExercise] = useState('');
+    // const {searchExercises, } = useQuery(GET_EXERCISES);
 
     const handleInputChange = (e) => {
         setMuscle(e.target.value);
     };
 
 
-    const handleSearch = () => {
-        searchExercises({
-            variables: { muscle },
-        });
-    };
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-
-    const exercises = data?.getExercises || [];
-
+    const handleSearch = async () => {
+        console.log('test')
+       let searchExercises = await getExercises(muscle)
+       setExercise(searchExercises); 
+        };
+        
+        // if (loading) {
+            //     return <div>Loading...</div>;
+            // }
+            
+            // if (error) {
+    //     return <div>Error: {error.message}</div>;
+    // }
+    
+    const exercises = data || [];
+    
     return (
-      <div className="exerciseBg" style={{ backgroundImage: `url(${weights})` }}>
+        <div className="exerciseBg" style={{ backgroundImage: `url(${weights})` }}>
             <div className="exerciseContainer">
                 <div>
                     <h1 className="exerciseHeader">Recommended Exercises</h1>
@@ -40,7 +42,7 @@ const ExerciseList = () => {
                             placeholder="Enter a Muscle Group"
                             value={muscle}
                             onChange={handleInputChange}
-                        />
+                            />
                         <button className="exercise-btn" onClick={handleSearch}>Search</button>
                     </div>
                     <div className="exerciseList">
@@ -55,10 +57,10 @@ const ExerciseList = () => {
                                     <p className="exercise-instructions">Instructions: {exercise.instructions}</p>
                                 </div>
 
-                            ))
-                        ) : (
-                            <img  />
-                        )}
+))
+) : (
+    <img  />
+    )}
 
                     </div>
                 </div>
@@ -67,6 +69,8 @@ const ExerciseList = () => {
 
         </div>
     );
+
 };
 
-export default ExerciseList;
+    
+    export default ExerciseList;
